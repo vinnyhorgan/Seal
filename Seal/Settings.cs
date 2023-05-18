@@ -11,5 +11,7 @@
         public bool Resizable = false;
         public bool VSync = true;
         public bool Debug = true;
+
+        protected Input Input { get { return Input.Instance; } }
     }
 }

@@ -27,6 +27,8 @@ namespace Seal
 
             Camera = new Camera();
 
+            SceneManager.Instance.CurrentScene = this;
+
             Logger.Debug("Created new Scene: " + Name);
         }
 

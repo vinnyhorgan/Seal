@@ -6,15 +6,9 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            var settings = new Settings();
-
-            settings.Title = "Test";
-            settings.Resizable = true;
-
-            using (var game = new Game(settings))
+            using (var game = new Game(new TestSettings()))
             {
-                Scene scene = new Scene("Test Scene");
-                SceneManager.Instance.CurrentScene = scene;
+                SceneManager.Instance.CurrentScene = new TestScene();
 
                 var testManager = new GameObject("Test Manager");
                 testManager.AddComponent<TestManager>();
